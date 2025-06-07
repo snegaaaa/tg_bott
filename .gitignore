@@ -1,0 +1,26 @@
+# Environment
+.env
+.venv/
+venv/
+
+# Database
+*.db
+*.sqlite
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store

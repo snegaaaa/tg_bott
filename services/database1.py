@@ -17,7 +17,6 @@ else:
         max_overflow=10
     )
 
-# Базовый класс для моделей
 Base = declarative_base()
 
 # Create session factory
@@ -28,7 +27,6 @@ AsyncSessionLocal = sessionmaker(
     autoflush=False
 )
 
-# Dependency to get DB session
 async def get_db_session():
     async with AsyncSessionLocal() as session:
         try:

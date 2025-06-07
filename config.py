@@ -1,15 +1,18 @@
 import os
 from dotenv import load_dotenv
 
-# Загрузка переменных окружения из .env
 load_dotenv()
 
-# Токен бота
-API_TOKEN = os.getenv("API_TOKEN")
 
-# Путь к базе данных
-DB_PATH = "math_tutor.db"
+class Config:
+    # Bot configuration
+    BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-# Логин и пароль репетитора
-TUTOR_LOGIN = "tutor"
-TUTOR_PASSWORD = "math2023"
+    # Database configuration
+    DB_URL = os.getenv("DB_URL", "sqlite+aiosqlite:///math_tutor.db")
+
+    # Logging
+    LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
+
+    # Other settings
+    ADMIN_IDS = [123456789]  # Ваш Telegram ID
